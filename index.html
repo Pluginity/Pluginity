@@ -268,7 +268,7 @@
     <div class="notice-card">
         <h4><i class="fa-solid fa-circle-exclamation"></i> Important Instructions</h4>
         <p>
-            To download our premium plugins, it is <span>compulsory to join our Telegram Channel</span> and follow us on <span>Instagram</span>. 
+            To download & Unlock premium plugins, it is <span>compulsory to join our Telegram Channel</span> and follow us on <span>Instagram</span>. 
             For Product Unlocking, Activation Passwords, or Secure Payment assistance, please <span>Contact us directly via WhatsApp</span>.
         </p>
     </div>
@@ -356,26 +356,61 @@
         <p><strong>Feb 2026:</strong> Added 100+ New Plugins for Pro Producers.</p>
     </div>
 </section>
-
 <section id="support" class="section">
     <div class="support-box">
         <h3>GET ACTIVATION PASSWORD</h3>
-        <p style="margin: 20px 0; opacity: 0.8; font-size: 18px;">Contact our official support for keys and payment assistance.</p>
-        <a href="https://wa.me/918375835217" target="_blank" class="download-btn" style="background: #25D366;">
-            <i class="fa-brands fa-whatsapp"></i> WHATSAPP SUPPORT With SHUB
-        </a>
-           <a href="https://wa.me/919050284425" target="_blank" class="download-btn" style="background: #25D366;">
-            <i class="fa-brands fa-whatsapp"></i> WHATSAPP SUPPORT With TARUN
-        </a>
-    </div>
-</section>
+        <p style="margin: 20px 0; opacity: 0.8; font-size: 18px;">
+            Contact our official support for keys and payment assistance.
+        </p>
 
-<section id="contact" class="section" style="text-align: center;">
-    <h3>JOIN THE COMMUNITY</h3>
-    <div class="social-icons">
-        <a href="https://www.instagram.com/pluginity" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://t.me/+HILrdOY520NkMTA1" target="_blank"><i class="fa-brands fa-telegram"></i></a>
-        <a href="https://paypal.me/TarunKanina2005" target="_blank"><i class="fa-brands fa-paypal"></i></a>
+        <!-- Single WhatsApp Button -->
+        <a href="javascript:void(0)" onclick="toggleWhatsAppBox()" 
+           class="download-btn" 
+           style="background: #25D366;">
+            <i class="fa-brands fa-whatsapp"></i> WHATSAPP SUPPORT
+        </a>
+
+        <!-- Hidden Popup Box -->
+        <div id="whatsappBox" style="
+            display:none;
+            margin-top:25px;
+            background: rgba(0,0,0,0.8);
+            border:1px solid #25D366;
+            padding:20px;
+            border-radius:15px;
+            backdrop-filter:blur(10px);
+        ">
+
+         <a href="https://wa.me/918375835217?text=Hello%20Pluginity%20Team,%20I%20would%20like%20to%20connect%20regarding%20activation%20services.%20Dear%20Shub,%20kindly%20share%20the%20activation%20procedure,%20pricing%20details,%20and%20secure%20payment%20instructions.%20I%20look%20forward%20to%20your%20response.%20Thank%20you."
+         
+               target="_blank"
+               style="
+                display:block;
+                padding:10px;
+                margin-bottom:10px;
+                background:rgba(255,255,255,0.05);
+                border-radius:8px;
+                text-decoration:none;
+                color:white;
+               ">
+               Chat with SHUB (8375835217)
+            </a>
+
+                     <a href="https://wa.me/919050284425?text=Hello%20Pluginity%20Team,%20I%20would%20like%20to%20connect%20regarding%20activation%20services.%20Dear%20Tarun,%20kindly%20share%20the%20activation%20procedure,%20pricing%20details,%20and%20secure%20payment%20instructions.%20I%20look%20forward%20to%20your%20response.%20Thank%20you."
+         
+               target="_blank"
+               style="
+                display:block;
+                padding:10px;
+                background:rgba(255,255,255,0.05);
+                border-radius:8px;
+                text-decoration:none;
+                color:white;
+               ">
+               Chat with TARUN (9050284425)
+            </a>
+
+        </div>
     </div>
 </section>
 
@@ -406,7 +441,18 @@
     }, { threshold: 0.1 });
 
     document.querySelectorAll('.card').forEach(card => observer.observe(card));
+
+    // ✅ WhatsApp Toggle Function (THIS WAS MISSING)
+    function toggleWhatsAppBox() {
+        const box = document.getElementById("whatsappBox");
+
+        if (box.style.display === "none" || box.style.display === "") {
+            box.style.display = "block";
+        } else {
+            box.style.display = "none";
+        }
+    }
 </script>
 
 </body>
-            </html>
+</html>
