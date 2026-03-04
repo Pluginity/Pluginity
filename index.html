@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=600, initial-scale=0.6, user-scalable=yes">
     <title>Pluginity - Premium Audio Universe</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -103,7 +103,7 @@
         }
 
         .hero h2 {
-            font-size: clamp(40px, 8vw, 80px);
+            font-size: 80px;
             line-height: 1.1;
             margin-bottom: 20px;
             background: linear-gradient(to bottom, #fff, #8a2be2);
@@ -138,7 +138,7 @@
         .notice-card span { color: #b56bff; font-weight: 700; text-decoration: underline; }
 
         /* PRODUCT GRID */
-        .section { padding: 80px 8%; }
+        .section { padding: 80px 8%; scroll-margin-top: 100px; }
         .plugin-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -160,16 +160,6 @@
 
         .card.reveal { opacity: 1; transform: translateY(0); }
 
-        .card::before {
-            content: '';
-            position: absolute;
-            top: -50%; left: -50%; width: 200%; height: 200%;
-            background: radial-gradient(circle, rgba(138, 43, 226, 0.1), transparent 70%);
-            opacity: 0; transition: 0.5s;
-        }
-
-        .card:hover::before { opacity: 1; }
-
         .card:hover {
             border-color: #b56bff;
             box-shadow: 0 0 40px rgba(138, 43, 226, 0.3);
@@ -177,7 +167,6 @@
         }
 
         .card i { font-size: 50px; color: #b56bff; margin-bottom: 20px; transition: 0.3s; }
-        .card:hover i { transform: scale(1.2); text-shadow: 0 0 15px #b56bff; }
 
         .download-btn {
             display: inline-block;
@@ -193,7 +182,96 @@
             z-index: 1;
         }
 
-        .download-btn:hover { transform: scale(1.05); box-shadow: 0 0 20px #b56bff; }
+        /* SUPPORT SECTION */
+        .support-box {
+            background: linear-gradient(rgba(138, 43, 226, 0.1), rgba(5, 0, 10, 0.9));
+            border: 1px solid #8a2be2;
+            border-radius: 30px;
+            padding: 60px;
+            text-align: center;
+        }
+
+        .social-icons a { font-size: 40px; margin: 0 25px; display: inline-block; transition: 0.4s; }
+
+        footer {
+            padding: 60px;
+            background: #020005;
+            text-align: center;
+            border-top: 1px solid rgba(138, 43, 226, 0.2);
+        }
+
+        /* REMOVED AGGRESSIVE MOBILE QUERIES TO KEEP DESKTOP FEEL */
+/* Telegram Gradient Effect */
+.menu a.tg-link {
+    background: linear-gradient(135deg, #24A1DE 0%, #0088cc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    display: inline-block;
+    filter: drop-shadow(0 0 2px rgba(0, 136, 204, 0.4));
+}
+
+.menu a.tg-link:hover {
+    filter: drop-shadow(0 0 10px #24A1DE);
+    transform: scale(1.05);
+}
+.disabled-btn {
+    opacity: 0.2;
+    pointer-events: none;
+    filter: grayscale(1);
+    cursor: not-allowed;
+}
+
+        /* ✅ DROP-DOWN & BUTTON SYMMETRY FIX */
+        .version-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .version-select {
+            width: 160px;
+            height: 48px;
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            border: 1px solid rgba(181, 107, 255, 0.4);
+            border-radius: 50px;
+            outline: none;
+            cursor: pointer;
+            text-align: center;
+            text-align-last: center;
+            font-weight: 600;
+            appearance: none;
+            transition: 0.3s;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, #8a2be2, #b56bff);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: 0.4s;
+        }
+
+        /* Card specific button size match */
+        .version-container .download-btn {
+            width: 160px;
+            height: 48px;
+            margin-top: 0;
+        }
+
+.disabled-btn {
+    opacity: 0.2;
+    filter: grayscale(1);
+    cursor: not-allowed;
+    /* pointer-events: none;  <-- Is line ko delete kar do ya comment kar do */
+        }
 
         /* SUPPORT SECTION */
         .support-box {
@@ -204,21 +282,12 @@
             text-align: center;
         }
 
-        /* SOCIALS */
-        .social-icons { margin-top: 40px; }
-        .social-icons a {
-            font-size: 40px;
-            margin: 0 25px;
-            transition: 0.4s;
-            display: inline-block;
+        #support .download-btn {
+            width: auto;
+            min-width: 280px;
+            padding: 15px 35px;
+            margin-top: 20px;
         }
-
-        .fa-instagram { color: #E1306C; }
-        .fa-telegram { color: #0088cc; }
-        .fa-paypal { color: #003087; }
-        .fa-whatsapp { color: #25D366; }
-
-        .social-icons a:hover { transform: scale(1.2) translateY(-5px); filter: drop-shadow(0 0 15px currentColor); }
 
         footer {
             padding: 60px;
@@ -227,18 +296,6 @@
             border-top: 1px solid rgba(138, 43, 226, 0.2);
         }
 
-        /* ONLY ADDED THIS FOR SIZE FIX - NO TEXT CHANGED */
-        @media (max-width: 768px) {
-            nav { padding: 15px 5%; flex-direction: column; }
-            .menu { margin-top: 10px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-            .menu a { margin-left: 10px; margin-right: 10px; font-size: 11px; }
-            .hero h2 { font-size: 45px; }
-            .section { padding: 40px 5%; }
-            .plugin-grid { grid-template-columns: 1fr; }
-            .card { padding: 25px; }
-            .social-icons a { font-size: 30px; margin: 0 10px; }
-            .neon-blob, .mouse-glow { width: 300px; height: 300px; }
-        }
     </style>
 </head>
 <body>
@@ -251,20 +308,19 @@
     <div class="logo">PLUGINITY</div>
     <div class="menu">
         <a href="#">Home</a>
-        <a href="#plugins">Plugins</a>
         <a href="#updates">Updates</a>
         <a href="#support">Support</a>
-        <a href="#contact">Contact</a>
+               <a href="https://t.me/pluginity" class="tg-link" target="_blank">Telegram</a>
     </div>
 </nav>
 
-<section class="hero">
+<section class="hero" id="home">
     <h2>ELEVATE <br> YOUR SOUND</h2>
     <p style="font-size: 1.2rem; letter-spacing: 2px; color: #b56bff; font-weight: 600;">PREMIUM VST • UNLIMITED CREATIVITY</p>
-    <a href="#plugins" class="download-btn">VIEW CATALOG</a>
+    <a href="#daw" class="download-btn">VIEW CATALOG</a>
 </section>
 
-<div class="notice-container">
+ <Div class="notice-container">
     <div class="notice-card">
         <h4><i class="fa-solid fa-circle-exclamation"></i> Important Instructions</h4>
         <p>
@@ -274,80 +330,87 @@
     </div>
 </div>
 
-<section id="plugins" class="section">
+<section id="daw" class="section">
     <h3 style="text-align: center; font-size: 40px; margin-bottom: 60px;">SELECT YOUR DAW</h3>
     <div class="plugin-grid">
-        <div class="card">
-    <div style="font-size: 22px; color: #b56bff; font-weight: 800; margin-bottom: 20px; text-shadow: 0 0 10px #b56bff;">
-        20$
-    </div>
-    <h4>Avid Protools</h4>
-    <p> Avid Protools Ultimate Download</p>
-    <a href="https://t.me/+HILrdOY520NkMTA1" target="_blank" class="download-btn">DOWNLOAD</a>
-</div>
-  <div class="card">
-    <div style="font-size: 22px; color: #b56bff; font-weight: 800; margin-bottom: 20px; text-shadow: 0 0 10px #b56bff;">
-        20$
-    </div>
-    <h4>Logic Pro</h4>
-    <p>onlyOnly for mac</p>
-    <a href="https://t.me/+HILrdOY520NkMTA1" target="_blank" class="download-btn">DOWNLOAD</a>
-</div>
-  <div class="card">
-    <div style="font-size: 22px; color: #b56bff; font-weight: 800; margin-bottom: 20px; text-shadow: 0 0 10px #b56bff;">
-        19$
-    </div>
-    <h4>Ableton</h4>
-    <p>ABleton Daw</p>
-    <a href="https://t.me/+HILrdOY520NkMTA1" target="_blank" class="download-btn">DOWNLOAD</a>
-</div>
-  <div class="card">
-    <div style="font-size: 22px; color: #b56bff; font-weight: 800; margin-bottom: 20px; text-shadow: 0 0 10px #b56bff;">
-        19$
-    </div>
-    <h4>Cubase 15 Pro</h4>
-    <p>Cubase 15 Pro</p>
-    <a href="https://t.me/+HILrdOY520NkMTA1" target="_blank" class="download-btn">DOWNLOAD</a>
-</div>
-    </div>
+        
+        
+           <div class="card">
+            <div style="text-align: left; margin-bottom: 20px;">
+                <span style="font-size: 22px; color: #b56bff; font-weight: 800; text-shadow: 0 0 10px #b56bff;">$40</span>
+            </div>
+            <h4>FL Studio</h4>
+            <p>v25.2.4.</p>
+            <div class="version-container">
+                <select class="version-select" onchange="updateDownloadLink(this)" data-win="https://t.me/pluginity/223">
+                    <option value="">Select Version</option>
+                    <option value="win">Windows</option>
+
+                </select>
+                <a href="#" target="_blank" class="download-btn disabled-btn">DOWNLOAD</a>
+            </div>
+        </div>
+        
+        
+        
+         <div class="card">
+            <div style="text-align: left; margin-bottom: 20px;">
+                <span style="font-size: 22px; color: #b56bff; font-weight: 800; text-shadow: 0 0 10px #b56bff;">$40</span>
+            </div>
+            <h4>Logic Pro</h4>
+            <p>v12.0.1</p>
+            <div class="version-container">
+                <select class="version-select" onchange="updateDownloadLink(this)" data-mac="https://t.me/pluginity/227">
+                    <option value="">Select Version</option>
+                    <option value="mac">Mac OS</option>
+                </select>
+                <a href="#" target="_blank" class="download-btn disabled-btn">DOWNLOAD</a>
+            </div>
+        </div>
+        
+        
+        
+        
+      <div class="card">
+            <div style="text-align: left; margin-bottom: 20px;">
+                <span style="font-size: 22px; color: #b56bff; font-weight: 800; text-shadow: 0 0 10px #b56bff;">$40</span>
+            </div>
+            <h4>Ableton Live Suite</h4>
+            <p>v12.3.5</p>
+            <div class="version-container">
+                <select class="version-select" onchange="updateDownloadLink(this)" data-win="https://t.me/pluginity/227" data-mac="https://t.me/pluginity/227">
+                    <option value="">Select Version</option>
+                    <option value="win">Windows</option>
+                    <option value="mac">Mac OS</option>
+                </select>
+                <a href="#" target="_blank" class="download-btn disabled-btn">DOWNLOAD</a>
+            </div>
+        </div>
+
+    
+        
+        
+   <div class="card">
+            <div style="text-align: left; margin-bottom: 20px;">
+                <span style="font-size: 22px; color: #b56bff; font-weight: 800; text-shadow: 0 0 10px #b56bff;">$40</span>
+            </div>
+            <h4>Cubase 15 Pro</h4>
+            <p>v15.0.10</p>
+            <div class="version-container">
+                <select class="version-select" onchange="updateDownloadLink(this)" data-win="https://t.me/pluginity/227" data-mac="https://t.me/pluginity/227">
+                    <option value="">Select Version</option>
+                    <option value="win">Windows</option>
+                     <option value="mac">Mac OS</option>
+
+                </select>
+                <a href="#" target="_blank" class="download-btn disabled-btn">DOWNLOAD</a>
+            </div>
+        </div>
+    
+
+
 </section>
-<section id="plugins" class="section">
-    <h3 style="text-align: center; font-size: 40px; margin-bottom: 60px;">COMPRESSOR COLLECTION</h3>
-    <div class="plugin-grid">
-          <div class="card">
-    <div style="font-size: 22px; color: #b56bff; font-weight: 800; margin-bottom: 20px; text-shadow: 0 0 10px #b56bff;">
-        20$
-    </div>
-    <h4>UAD 1176</h4>
-    <p>Uad 1176</p>
-    <a href="https://t.me/+HILrdOY520NkMTA1" target="_blank" class="download-btn">DOWNLOAD</a>
-</div>
-  <div class="card">
-    <div style="font-size: 22px; color: #b56bff; font-weight: 800; margin-bottom: 20px; text-shadow: 0 0 10px #b56bff;">
-        20$
-    </div>
-    <h4>UAD LA2A</h4>
-    <p>onlyOnly for mac</p>
-    <a href="https://t.me/+HILrdOY520NkMTA1" target="_blank" class="download-btn">DOWNLOAD</a>
-</div>
-  <div class="card">
-    <div style="font-size: 22px; color: #b56bff; font-weight: 800; margin-bottom: 20px; text-shadow: 0 0 10px #b56bff;">
-        19$
-    </div>
-    <h4>RUBY & RUBY 2</h4>
-    <p>Acustica Audio</p>
-    <a href="https://t.me/+HILrdOY520NkMTA1" target="_blank" class="download-btn">DOWNLOAD</a>
-</div>
-  <div class="card">
-    <div style="font-size: 22px; color: #b56bff; font-weight: 800; margin-bottom: 20px; text-shadow: 0 0 10px #b56bff;">
-        19$
-    </div>
-    <h4>SSL GLUE COMP</h4>
-    <p>Ssl Compression unit</p>
-    <a href="https://t.me/+HILrdOY520NkMTA1" target="_blank" class="download-btn">DOWNLOAD</a>
-</div>
-    </div>
-</section>
+
 
 <section id="updates" class="section" style="text-align: center; background: rgba(138,43,226,0.02);">
     <h3 style="color: #b56bff; margin-bottom: 30px;">SYSTEM UPDATES</h3>
@@ -356,6 +419,7 @@
         <p><strong>Feb 2026:</strong> Added 100+ New Plugins for Pro Producers.</p>
     </div>
 </section>
+
 <section id="support" class="section">
     <div class="support-box">
         <h3>GET ACTIVATION PASSWORD</h3>
@@ -363,77 +427,34 @@
             Contact our official support for keys and payment assistance.
         </p>
 
-        <!-- Single WhatsApp Button -->
-        <a href="javascript:void(0)" onclick="toggleWhatsAppBox()" 
-           class="download-btn" 
-           style="background: #25D366;">
+        <a href="javascript:void(0)" onclick="toggleWhatsAppBox()" class="download-btn" style="background: #25D366;">
             <i class="fa-brands fa-whatsapp"></i> WHATSAPP SUPPORT
         </a>
 
-        <!-- Hidden Popup Box -->
-        <div id="whatsappBox" style="
-            display:none;
-            margin-top:25px;
-            background: rgba(0,0,0,0.8);
-            border:1px solid #25D366;
-            padding:20px;
-            border-radius:15px;
-            backdrop-filter:blur(10px);
-        ">
-
-         <a href="https://wa.me/918375835217?text=Hello%20Pluginity%20Team,%20I%20would%20like%20to%20connect%20regarding%20activation%20services.%20Dear%20Shub,%20kindly%20share%20the%20activation%20procedure,%20pricing%20details,%20and%20secure%20payment%20instructions.%20I%20look%20forward%20to%20your%20response.%20Thank%20you."
-         
-               target="_blank"
-               style="
-                display:block;
-                padding:10px;
-                margin-bottom:10px;
-                background:rgba(255,255,255,0.05);
-                border-radius:8px;
-                text-decoration:none;
-                color:white;
-               ">
+        <div id="whatsappBox" style="display:none; margin-top:25px; background: rgba(0,0,0,0.8); border:1px solid #25D366; padding:20px; border-radius:15px; backdrop-filter:blur(10px);">
+            <a href="https://wa.me/918375835217?text=Hello%20Team%20Pluginity,%20I%20would%20like%20to%20connect%20regarding%20activation%20services.%20Dear%20Shub,%20kindly%20share%20the%20activation%20procedure,%20pricing%20details,%20and%20secure%20payment%20instructions.%20I%20look%20forward%20to%20your%20response.%20Thank%20you."target="_blank" style="display:block; padding:10px; margin-bottom:10px; background:rgba(255,255,255,0.05); border-radius:8px; text-decoration:none; color:white;">
                Chat with SHUB (8375835217)
             </a>
-
-                     <a href="https://wa.me/919050284425?text=Hello%20Pluginity%20Team,%20I%20would%20like%20to%20connect%20regarding%20activation%20services.%20Dear%20Tarun,%20kindly%20share%20the%20activation%20procedure,%20pricing%20details,%20and%20secure%20payment%20instructions.%20I%20look%20forward%20to%20your%20response.%20Thank%20you."
-         
-               target="_blank"
-               style="
-                display:block;
-                padding:10px;
-                background:rgba(255,255,255,0.05);
-                border-radius:8px;
-                text-decoration:none;
-                color:white;
-               ">
+            <a href="https://wa.me/919050284425?text=Hello%20Team%20Pluginity ,%20I%20would%20like%20to%20connect%20regarding%20activation%20services.%20Dear%20Tarun,%20kindly%20share%20the%20activation%20procedure,%20pricing%20details,%20and%20secure%20payment%20instructions.%20I%20look%20forward%20to%20your%20response.%20Thank%20you. " target="_blank" style="display:block; padding:10px; background:rgba(255,255,255,0.05); border-radius:8px; text-decoration:none; color:white;">
                Chat with TARUN (9050284425)
             </a>
-
         </div>
     </div>
 </section>
 
 <footer>
     <p>© 2026 PLUGINITY WORLDWIDE. ALL RIGHTS RESERVED.</p>
-          <p style="font-size: 13px; margin-top: 10px; color: #aaa; letter-spacing: 1px;">
-        Digitaly Operating & Handle by <strong>SHUB</strong>
-    </p>
-    <p style="font-size: 13px; margin-top: 10px; color: #aaa; letter-spacing: 1px;">
-        Developed by <strong>Tarun Kumar</strong> for Pro Producer & Audio Engineer
-    </p>
-
+    <p style="font-size: 13px; margin-top: 10px; color: #aaa; letter-spacing: 1px;">Digitaly Operating & Handle by <strong>SHUB</strong></p>
+    <p style="font-size: 13px; margin-top: 10px; color: #aaa; letter-spacing: 1px;">Developed by <strong>Tarun Kumar</strong></p>
 </footer>
 
 <script>
-    // Mouse Glow
     const glow = document.getElementById('glow');
     document.addEventListener('mousemove', (e) => {
         glow.style.left = e.clientX + 'px';
         glow.style.top = e.clientY + 'px';
     });
 
-    // Scroll Reveal
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) entry.target.classList.add('reveal');
@@ -442,16 +463,53 @@
 
     document.querySelectorAll('.card').forEach(card => observer.observe(card));
 
-    // ✅ WhatsApp Toggle Function (THIS WAS MISSING)
     function toggleWhatsAppBox() {
         const box = document.getElementById("whatsappBox");
-
-        if (box.style.display === "none" || box.style.display === "") {
-            box.style.display = "block";
-        } else {
-            box.style.display = "none";
-        }
+        box.style.display = (box.style.display === "none" || box.style.display === "") ? "block" : "none";
     }
+
+    // Smooth scroll fix
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if(targetId === "#") {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                return;
+            }
+            const target = document.querySelector(targetId);
+            if (target) {
+                window.scrollTo({
+                    top: target.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    function updateDownloadLink(selectElement) {
+    const container = selectElement.parentElement;
+    const btn = container.querySelector('.download-btn');
+    const selectedVersion = selectElement.value;
+    
+    if (selectedVersion === "win" || selectedVersion === "mac") {
+        const link = selectElement.getAttribute('data-' + selectedVersion);
+        if (link) {
+            btn.setAttribute('href', link); // Link set kiya
+            btn.classList.remove('disabled-btn');
+            btn.style.pointerEvents = "auto"; // Click chalu kiya
+            btn.style.cursor = "pointer";
+            btn.style.opacity = "1";
+            btn.style.filter = "grayscale(0)";
+        }
+    } else {
+        btn.setAttribute('href', '#');
+        btn.classList.add('disabled-btn');
+        btn.style.pointerEvents = "none"; // Click band kiya
+        btn.style.opacity = "0.2";
+        btn.style.filter = "grayscale(1)";
+    }
+}
 </script>
 
 </body>
