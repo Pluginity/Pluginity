@@ -217,7 +217,6 @@
 }
 .disabled-btn {
     opacity: 0.2;
-    pointer-events: none;
     filter: grayscale(1);
     cursor: not-allowed;
 }
@@ -258,21 +257,6 @@
             font-weight: 700;
             transition: 0.4s;
         }
-
-        /* Card specific button size match */
-        .version-container .download-btn {
-            width: 160px;
-            height: 48px;
-            margin-top: 0;
-        }
-
-.disabled-btn {
-    opacity: 0.2;
-    filter: grayscale(1);
-    cursor: not-allowed;
-    /* pointer-events: none;  <-- Is line ko delete kar do ya comment kar do */
-        }
-
         /* SUPPORT SECTION */
         .support-box {
             background: linear-gradient(rgba(138, 43, 226, 0.1), rgba(5, 0, 10, 0.9));
@@ -294,6 +278,12 @@
             background: #020005;
             text-align: center;
             border-top: 1px solid rgba(138, 43, 226, 0.2);
+        }
+                /* Card specific button size match */
+        .version-container .download-btn {
+            width: 160px;
+            height: 48px;
+            margin-top: 0;
         }
 
     </style>
@@ -337,12 +327,12 @@
         
            <div class="card">
             <div style="text-align: left; margin-bottom: 20px;">
-                <span style="font-size: 22px; color: #b56bff; font-weight: 800; text-shadow: 0 0 10px #b56bff;">$40</span>
+                <span style="font-size: 22px; color: #b56bff; font-weight: 800; text-shadow: 0 0 10px #b56bff;">$35</span>
             </div>
-            <h4>FL Studio</h4>
-            <p>v25.2.4.</p>
+            <h4>Avid ProTools</h4>
+            <p>v12HD</p>
             <div class="version-container">
-                <select class="version-select" onchange="updateDownloadLink(this)" data-win="https://t.me/pluginity/223">
+                <select class="version-select" onchange="updateDownloadLink(this)" data-win="https://t.me/pluginity/225">
                     <option value="">Select Version</option>
                     <option value="win">Windows</option>
 
@@ -357,12 +347,12 @@
             <div style="text-align: left; margin-bottom: 20px;">
                 <span style="font-size: 22px; color: #b56bff; font-weight: 800; text-shadow: 0 0 10px #b56bff;">$40</span>
             </div>
-            <h4>Logic Pro</h4>
-            <p>v12.0.1</p>
+            <h4>FL Studio</h4>
+            <p>v25.2.4</p>
             <div class="version-container">
-                <select class="version-select" onchange="updateDownloadLink(this)" data-mac="https://t.me/pluginity/227">
+                <select class="version-select" onchange="updateDownloadLink(this)" data-win="https://t.me/pluginity/223">
                     <option value="">Select Version</option>
-                    <option value="mac">Mac OS</option>
+                    <option value="win">Windows</option>
                 </select>
                 <a href="#" target="_blank" class="download-btn disabled-btn">DOWNLOAD</a>
             </div>
@@ -397,26 +387,65 @@
             <h4>Cubase 15 Pro</h4>
             <p>v15.0.10</p>
             <div class="version-container">
-                <select class="version-select" onchange="updateDownloadLink(this)" data-win="https://t.me/pluginity/227" data-mac="https://t.me/pluginity/227">
+                <select class="version-select" onchange="updateDownloadLink(this)" data-shub="https://wa.me/918375835217" data-tarun="https://wa.me/919050284425">
+                    <option value="">Inquiry</option>
+  <option value="shub">Chat With Shub</option>  <option value="tarun">Chat With Tarun</option>
+                </select>
+                <a href="#" target="_blank" class="download-btn disabled-btn">Let's Go</a>
+            </div>
+        </div>
+
+</section>
+
+
+<section id="uad" class="section">
+    <h3 style="text-align: center; font-size: 40px; margin-bottom: 60px;">UAD 2 COMPLETE</h3>
+    <div class="plugin-grid">
+        
+        
+           <div class="card">
+            <div style="text-align: left; margin-bottom: 20px;">
+                <span style="font-size: 22px; color: #b56bff; font-weight: 800; text-shadow: 0 0 10px #b56bff;">$50</span>
+            </div>
+            <h4>UAD 2 COMPLETE</h4>
+            <p>Required : Ua Hardware</p>
+            <div class="version-container">
+                <select class="version-select" onchange="updateDownloadLink(this)" data-win="https://t.me/pluginity/216?single">
                     <option value="">Select Version</option>
                     <option value="win">Windows</option>
-                     <option value="mac">Mac OS</option>
-
                 </select>
                 <a href="#" target="_blank" class="download-btn disabled-btn">DOWNLOAD</a>
             </div>
         </div>
-    
-
-
+        </section>
+        
+        <section id="uad" class="section">
+    <h3 style="text-align: center; font-size: 40px; margin-bottom: 60px;">WAVES ULTIMATE</h3>
+    <div class="plugin-grid">
+        
+        
+         <div class="card">
+            <div style="text-align: left; margin-bottom: 20px;">
+                <span style="font-size: 22px; color: #b56bff; font-weight: 800; text-shadow: 0 0 10px #b56bff;">$30</span>
+            </div>
+            <h4>Waves Ultimate</h4>
+            <p>v16.5.5</p>
+            <div class="version-container">
+                <select class="version-select" onchange="updateDownloadLink(this)" data-win="https://t.me/pluginity/221" data-mac="https://t.me/pluginity/220">
+                    <option value="">Select Version</option>
+                    <option value="win">Windows</option>
+                      <option value="mac">Mac OS</option>
+                </select>
+                <a href="#" target="_blank" class="download-btn disabled-btn">DOWNLOAD</a>
+            </div>
+        </div>
 </section>
-
 
 <section id="updates" class="section" style="text-align: center; background: rgba(138,43,226,0.02);">
     <h3 style="color: #b56bff; margin-bottom: 30px;">SYSTEM UPDATES</h3>
     <div style="border-left: 4px solid #b56bff; padding-left: 20px; display: inline-block; text-align: left;">
         <p><strong>Win/Mac:</strong> All plugins now support Apple Silicon M3 & Windows Intel/Ryzen</p>
-        <p><strong>Feb 2026:</strong> Added 100+ New Plugins for Pro Producers.</p>
+        <p><strong>Jan 2026:</strong> Added 100+ New Plugins for Pro Producers.</p>
     </div>
 </section>
 
@@ -469,7 +498,7 @@
     }
 
     // Smooth scroll fix
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    document.querySelectorAll('nav a[href^="#"], .hero a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
@@ -486,31 +515,13 @@
             }
         });
     });
-    
     function updateDownloadLink(selectElement) {
-    const container = selectElement.parentElement;
+    const container = selectElement.closest('.version-container');
     const btn = container.querySelector('.download-btn');
     const selectedVersion = selectElement.value;
-    
-    if (selectedVersion === "win" || selectedVersion === "mac") {
-        const link = selectElement.getAttribute('data-' + selectedVersion);
-        if (link) {
-            btn.setAttribute('href', link); // Link set kiya
-            btn.classList.remove('disabled-btn');
-            btn.style.pointerEvents = "auto"; // Click chalu kiya
-            btn.style.cursor = "pointer";
-            btn.style.opacity = "1";
-            btn.style.filter = "grayscale(0)";
-        }
-    } else {
-        btn.setAttribute('href', '#');
-        btn.classList.add('disabled-btn');
-        btn.style.pointerEvents = "none"; // Click band kiya
-        btn.style.opacity = "0.2";
-        btn.style.filter = "grayscale(1)";
-    }
-}
-</script>
+    const link = selectElement.getAttribute('data-' + selectedVersion);
 
-</body>
-</html>
+    if (selectedVersion && link) {
+        // 1. Link set karein
+        btn.href = link; 
+        // 2. Disabled class hat
