@@ -21,22 +21,23 @@
         }
 
         /* ===== ADVANCED NEON BACKGROUND ===== */
-        .bg-vibe {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: radial-gradient(circle at 50% 50%, #1a0033 0%, #05000a 100%);
-            z-index: -3;
-        }
+   .bg-vibe {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    /* Pehle #05000a tha, ab deep purple gradient hai */
+    background: radial-gradient(circle at 50% 50%, #2a0052 0%, #05000a 100%);
+    z-index: -3;
+}
 
-        .neon-blob {
-            position: fixed;
-            width: 500px; height: 500px;
-            background: rgba(138, 43, 226, 0.15);
-            filter: blur(120px);
-            border-radius: 50%;
-            z-index: -2;
-            animation: moveBlobs 15s infinite alternate ease-in-out;
-        }
+     .neon-blob {
+    position: fixed;
+    width: 600px; height: 600px;
+    background: rgba(181, 107, 255, 0.25); /* Opacity badha di */
+    filter: blur(150px);
+    border-radius: 50%;
+    z-index: -2;
+    animation: moveBlobs 15s infinite alternate ease-in-out;
+}
 
         @keyframes moveBlobs {
             0% { top: -10%; left: -10%; transform: scale(1); }
@@ -91,16 +92,17 @@
         .menu a:hover { color: #b56bff; text-shadow: 0 0 10px #b56bff; }
 
         /* HERO SECTION */
-        .hero {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: linear-gradient(rgba(5, 0, 10, 0.6), rgba(5, 0, 10, 0.6)), 
-                        url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80&w=2000') center/cover;
-        }
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* Overlay ka color thoda purple-tinted kar diya */
+    background: linear-gradient(rgba(5, 0, 10, 0.4), rgba(42, 0, 82, 0.4)), 
+                url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80&w=2000') center/cover;
+}
 
         .hero h2 {
             font-size: 80px;
@@ -145,26 +147,28 @@
             gap: 40px;
         }
 
-        .card {
-            background: rgba(255, 255, 255, 0.02);
-            border-radius: 24px;
-            padding: 40px;
-            text-align: center;
-            border: 1px solid rgba(255,255,255,0.05);
-            transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-            opacity: 0;
-            transform: translateY(30px);
-        }
+    .card {
+    background: rgba(255, 255, 255, 0.07); 
+    backdrop-filter: blur(12px);
+    border-radius: 24px;
+    padding: 40px;
+    text-align: center;
+    border: 1px solid rgba(181, 107, 255, 0.2); 
+    transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+}
 
         .card.reveal { opacity: 1; transform: translateY(0); }
 
-        .card:hover {
-            border-color: #b56bff;
-            box-shadow: 0 0 40px rgba(138, 43, 226, 0.3);
-            transform: translateY(-10px);
-        }
+.card:hover {
+    border-color: #b56bff;
+    box-shadow: 0 0 40px rgba(181, 107, 255, 0.4);
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.12);
+}
 
         .card i { font-size: 50px; color: #b56bff; margin-bottom: 20px; transition: 0.3s; }
 
@@ -285,7 +289,12 @@
             height: 48px;
             margin-top: 0;
         }
-
+.product-img{
+width:100%;
+height:150px;
+object-fit:contain;
+margin-bottom:20px;
+}
     </style>
 </head>
 <body>
@@ -321,11 +330,12 @@
 </div>
 
 <section id="daw" class="section">
-    <h3 style="text-align: center; font-size: 40px; margin-bottom: 60px;">SELECT YOUR DAW</h3>
+    <h3 style="text-align: center; font-size: 40px; margin-bottom: 60px;">DAW'S</h3>
     <div class="plugin-grid">
         
         
            <div class="card">
+               <img src="images/avid.png" class="product-img">
             <div style="text-align: left; margin-bottom: 20px;">
                 <span style="font-size: 22px; color: #b56bff; font-weight: 800; text-shadow: 0 0 10px #b56bff;">$35</span>
             </div>
@@ -344,6 +354,7 @@
         
         
          <div class="card">
+               <img src="images/flstudio.jpg" class="product-img">
             <div style="text-align: left; margin-bottom: 20px;">
                 <span style="font-size: 22px; color: #b56bff; font-weight: 800; text-shadow: 0 0 10px #b56bff;">$40</span>
             </div>
@@ -362,6 +373,7 @@
         
         
       <div class="card">
+            <img src="images/live.png" class="product-img">
             <div style="text-align: left; margin-bottom: 20px;">
                 <span style="font-size: 22px; color: #b56bff; font-weight: 800; text-shadow: 0 0 10px #b56bff;">$40</span>
             </div>
@@ -381,6 +393,7 @@
         
         
    <div class="card">
+         <img src="images/cubase.jpg" class="product-img">
             <div style="text-align: left; margin-bottom: 20px;">
                 <span style="font-size: 22px; color: #b56bff; font-weight: 800; text-shadow: 0 0 10px #b56bff;">$40</span>
             </div>
@@ -404,6 +417,7 @@
         
         
            <div class="card">
+                <img src="images/uad.png" class="product-img">
             <div style="text-align: left; margin-bottom: 20px;">
                 <span style="font-size: 22px; color: #b56bff; font-weight: 800; text-shadow: 0 0 10px #b56bff;">$50</span>
             </div>
@@ -419,12 +433,13 @@
         </div>
         </section>
         
-        <section id="uad" class="section">
+        <section id="waves" class="section">
     <h3 style="text-align: center; font-size: 40px; margin-bottom: 60px;">WAVES ULTIMATE</h3>
     <div class="plugin-grid">
         
         
          <div class="card">
+              <img src="images/waves.jpg" class="product-img">
             <div style="text-align: left; margin-bottom: 20px;">
                 <span style="font-size: 22px; color: #b56bff; font-weight: 800; text-shadow: 0 0 10px #b56bff;">$30</span>
             </div>
@@ -441,11 +456,55 @@
         </div>
 </section>
 
+<section id="gc" class="section">
+    <h3 style="text-align: center; font-size: 40px; margin-bottom: 60px;">SCHWABE DIGITAL</h3>
+    <div class="plugin-grid">
+        
+        
+           <div class="card">
+                <img src="images/gc.png" class="product-img">
+            <div style="text-align: left; margin-bottom: 20px;">
+                <span style="font-size: 22px; color: #b56bff; font-weight: 800; text-shadow: 0 0 10px #b56bff;">$40</span>
+            </div>
+            <h3>Gold clip</h3>
+            <p>Schwabe Digital Gold Clip</p>
+            <div class="version-container">
+                <select class="version-select" onchange="updateDownloadLink(this)" data-mac="https://t.me/pluginity/245">
+                    <option value="">Select Version </option>
+                    <option value="mac">Mac OS</option>
+                </select>
+                <a href="#" target="_blank" class="download-btn disabled-btn">DOWNLOAD</a>
+            </div>
+        </div>
+        </section>
+
+<section id="freq-2" class="section">
+    <h3 style="text-align: center; font-size: 40px; margin-bottom: 60px;">KONTAKT SOUND LIBRARIES</h3>
+    <div class="plugin-grid">
+        
+        
+           <div class="card">
+                <img src="images/freq-2.png" class="product-img">
+            <div style="text-align: left; margin-bottom: 20px;">
+                <span style="font-size: 22px; color: #b56bff; font-weight: 800; text-shadow: 0 0 10px #b56bff;">$40</span>
+            </div>
+            <h3>Freq-2</h3>
+            <p>Dezert Audio Freq-2 Kontakt Sound Library</p>
+            <div class="version-container">
+                <select class="version-select" onchange="updateDownloadLink(this)" data-freq-2="https://t.me/pluginity/247">
+                    <option value="">Select Library </option>
+                    <option value="freq-2">Freq-2</option>
+                </select>
+                <a href="#" target="_blank" class="download-btn disabled-btn">DOWNLOAD</a>
+            </div>
+        </div>
+        </section>
+
 <section id="updates" class="section" style="text-align: center; background: rgba(138,43,226,0.02);">
     <h3 style="color: #b56bff; margin-bottom: 30px;">SYSTEM UPDATES</h3>
     <div style="border-left: 4px solid #b56bff; padding-left: 20px; display: inline-block; text-align: left;">
-        <p><strong>Win/Mac:</strong> All plugins now support Apple Silicon M3 & Windows Intel/Ryzen</p>
-        <p><strong>Jan 2026:</strong> Added 100+ New Plugins for Pro Producers.</p>
+          <p><strong>Jan 2026:</strong> Added 100+ New Plugins for Pro Producers.</p>
+        <p><strong>Mac/Win ⊞:</strong> All plugins now support Apple Silicon M3 & Windows Intel/Ryzen</p>
     </div>
 </section>
 
