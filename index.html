@@ -295,6 +295,14 @@ height:150px;
 object-fit:contain;
 margin-bottom:20px;
 }
+.library{
+padding:20px 0;
+border-bottom:1px solid rgba(255,255,255,0.15);
+}
+
+.library:last-child{
+border-bottom:none;
+}
     </style>
 </head>
 <body>
@@ -481,24 +489,68 @@ margin-bottom:20px;
 <section id="freq-2" class="section">
     <h3 style="text-align: center; font-size: 40px; margin-bottom: 60px;">KONTAKT SOUND LIBRARIES</h3>
     <div class="plugin-grid">
-        
-        
-           <div class="card">
-                <img src="freq-2.png" class="product-img">
-            <div style="text-align: left; margin-bottom: 20px;">
-                <span style="font-size: 22px; color: #b56bff; font-weight: 800; text-shadow: 0 0 10px #b56bff;">$40</span>
-            </div>
-            <h3>Freq-2</h3>
-            <p>Dezert Audio Freq-2 Kontakt Sound Library</p>
-            <div class="version-container">
-                <select class="version-select" onchange="updateDownloadLink(this)" data-freq-2="https://t.me/pluginity/247">
-                    <option value="">Select Library </option>
-                    <option value="freq-2">Freq-2</option>
-                </select>
-                            <a href="javascript:void(0)" target="_blank" class="download-btn disabled-btn" style="pointer-events:none;">DOWNLOAD</a>
-            </div>
-        </div>
-        </section>
+
+<div class="card">
+
+<div class="library-list">
+
+<div class="library">
+<img src="freq-2.png" class="product-img">
+<h4>FREQ-2</h4>
+<p>Dezert Audio Freq-2 Kontakt Library</p>
+
+<div style="text-align:left;margin-bottom:20px;">
+   <span style="font-size: 22px; color: #b56bff; font-weight: 800; text-shadow: 0 0 10px #b56bff;">$40</span>
+</div>
+
+</div>
+
+<hr class="library-separator">
+
+<div class="library">
+<img src="picked acoustic.png" class="product-img">
+<h4>PICKED ACOUSTIC</h4>
+<p>Picked Acoustic Guitar Kontakt Library</p>
+
+<div style="text-align:left;margin-bottom:20px;">
+   <span style="font-size: 22px; color: #b56bff; font-weight: 800; text-shadow: 0 0 10px #b56bff;">$40</span>
+</div>
+
+<hr class="library-separator">
+
+<div class="library">
+<img src="icon bass.png" class="product-img">
+<h4>ICON BASS</h4>
+<p>Electric Bass Guitar Kontakt Library</p>
+
+<div style="text-align:left;margin-bottom:20px;">
+   <span style="font-size: 22px; color: #b56bff; font-weight: 800; text-shadow: 0 0 10px #b56bff;">$40</span>
+</div>
+
+</div>
+
+</div>
+
+<div class="version-container">
+<select class="version-select" onchange="updateDownloadLink(this)"
+data-freq2="https://t.me/pluginity/247"
+data-sg="https://t.me/pluginity/248"
+data-ib="https://t.me/pluginity/249">
+
+<option value="">Select Library</option>
+<option value="freq2">Freq-2</option>
+<option value="sg">Session Guitar</option>
+<option value="ib">Icon Bass</option>
+
+</select>
+
+<a href="javascript:void(0)" target="_blank" class="download-btn disabled-btn" style="pointer-events:none;">
+DOWNLOAD
+</a>
+
+</div>
+</div>
+</section> 
 
 <section id="updates" class="section" style="text-align: center; background: rgba(138,43,226,0.02);">
     <h3 style="color: #b56bff; margin-bottom: 30px;">SYSTEM UPDATES</h3>
